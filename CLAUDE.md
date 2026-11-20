@@ -20,5 +20,6 @@ Keep every change in this look: clean serif fonts, feminine but clean and academ
 - Links: accent color with a thin underline, no default blue.
 - Layout: one narrow centered column (about 680px), lots of white space, no boxes, shadows, rounded corners or decoration.
 - Headshot: images/headshot.jpg, shown as a circle to the left of the About text (above it on phones). The circle is the one exception to "no rounded corners".
+- Clips: a list, newest first. Each clip has a small uppercase muted line with the outlet and date, then the headline in Cormorant Garamond, linked to the story in near-black (turns accent color on hover). Thin pale line between clips. Use the add-clip skill to add one.
 - Placeholders for missing content: pale blush box with a dashed border and italic text.
 - Keep the page working on phones.
