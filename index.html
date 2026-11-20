@@ -145,6 +145,68 @@
       border-bottom: 0;
     }
     .clip-headline a:hover { color: var(--accent); }
+    .rosie {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 10;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .rosie img {
+      display: block;
+      width: auto;
+      height: 110px;
+      transition: transform 0.2s ease;
+    }
+    .rosie:hover img { transform: rotate(-4deg); }
+    .rosie:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    .rosie-bubble {
+      position: absolute;
+      bottom: calc(100% - 4px);
+      right: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 40px;
+      background: #fffaf7;
+      border: 1px solid var(--hairline);
+      border-radius: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+      opacity: 0;
+      transform: translateY(8px) scale(0.5);
+      transform-origin: bottom right;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .rosie-bubble::after {
+      content: "";
+      position: absolute;
+      right: 6px;
+      bottom: -7px;
+      width: 12px;
+      height: 12px;
+      background: #fffaf7;
+      border-right: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+      transform: rotate(45deg) skew(10deg, 10deg);
+    }
+    .rosie.is-saying .rosie-bubble {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+    .rosie-bubble svg { width: 22px; height: 22px; position: relative; z-index: 1; }
+    @media (max-width: 560px) {
+      .rosie img { height: 84px; }
+      body { padding-bottom: 170px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .rosie img, .rosie-bubble { transition: none; }
+    }
     .contact {
       margin: 0;
       padding-top: 24px;
@@ -195,5 +257,26 @@
 
     <p class="contact">You can reach me at <a href="mailto:emmaruby@washsun.com">emmaruby@washsun.com</a>.</p>
   </main>
+
+  <button class="rosie" type="button" aria-label="Rosie the dog">
+    <span class="rosie-bubble" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path fill="#d2283c" d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 3 4.5 6.8 4.5c2.2 0 3.6 1.2 5.2 3 1.6-1.8 3-3 5.2-3 3.8 0 5.9 3.9 4.4 7.3C19.5 16.4 12 21 12 21z"/></svg>
+    </span>
+    <img src="images/rosie.svg" alt="Illustration of Rosie the dog" width="75" height="110">
+  </button>
+
+  <script>
+    (function () {
+      var rosie = document.querySelector('.rosie');
+      var timer;
+      rosie.addEventListener('click', function () {
+        clearTimeout(timer);
+        rosie.classList.remove('is-saying');
+        void rosie.offsetWidth;
+        rosie.classList.add('is-saying');
+        timer = setTimeout(function () { rosie.classList.remove('is-saying'); }, 2500);
+      });
+    })();
+  </script>
 </body>
 </html>
