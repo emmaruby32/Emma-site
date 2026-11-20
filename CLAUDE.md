@@ -23,5 +23,6 @@ Keep every change in this look: clean serif fonts, feminine but clean and academ
 - Clips: a list, newest first. Each clip has a small uppercase muted line with the outlet and date, then the headline in Cormorant Garamond, linked to the story (opens in a new tab) in near-black (turns accent color on hover). Thin pale line between clips. Write clip dates as Month Day, Year (for example "November 11, 2026"); Emma chose this style. Use the add-clip skill to add one.
 - Social: an X logo (links to https://x.com/emmaeruby) sits under the contact email, in the accent color, with no underline.
 - Rosie: Emma's dog, as a small hand-drawn illustration (images/rosie.svg, with a cream sticker outline so she shows in light and dark mode) fixed in the bottom-right corner. Clicking her pops up a small hand-sketched speech bubble (loose pencil-style outline) with a sketched red heart (soft red wash, pencil hatching). The bubble is the other exception to "no rounded corners or decoration".
+- Browser tab icon: the initials "ER" in capitals, Cormorant Garamond, cream letters on an accent-color square (images/favicon.svg, with PNG copies favicon-32.png and apple-touch-icon.png).
 - Placeholders for missing content: pale blush box with a dashed border and italic text.
 - Keep the page working on phones.
