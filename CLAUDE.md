@@ -19,5 +19,6 @@ Keep every change in this look: clean serif fonts, feminine but clean and academ
 - Colors: white background, near-black text (#1c1a1a), muted gray (#6b6363), and one rose-crimson accent (#b3243c) used only for links. Keep the dark-mode colors that match.
 - Links: accent color with a thin underline, no default blue.
 - Layout: one narrow centered column (about 680px), lots of white space, no boxes, shadows, rounded corners or decoration.
+- Headshot: images/headshot.jpg, shown as a circle to the left of the About text (above it on phones). The circle is the one exception to "no rounded corners".
 - Placeholders for missing content: pale blush box with a dashed border and italic text.
 - Keep the page working on phones.

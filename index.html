@@ -85,6 +85,29 @@
     section p {
       margin: 0;
     }
+    .about-body {
+      display: flex;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    .headshot {
+      flex: 0 0 auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 560px) {
+      .about-body {
+        flex-direction: column;
+        gap: 24px;
+      }
+      .headshot {
+        width: 160px;
+        height: 160px;
+      }
+    }
     .placeholder {
       padding: 16px 18px;
       background: var(--placeholder-bg);
@@ -116,7 +139,10 @@
 
     <section id="about">
       <h2>About</h2>
-      <p>Emma previously worked at the Dallas Observer where she covered local and state government. She studied journalism at Loyola University in New Orleans where she worked for the student newspaper The Maroon and interned with the Dallas Morning News and InvestigateTV.</p>
+      <div class="about-body">
+        <img class="headshot" src="images/headshot.jpg" alt="Emma Ruby" width="180" height="180">
+        <p>Emma previously worked at the Dallas Observer where she covered local and state government. She studied journalism at Loyola University in New Orleans where she worked for the student newspaper The Maroon and interned with the Dallas Morning News and InvestigateTV.</p>
+      </div>
     </section>
 
     <section id="clips">
