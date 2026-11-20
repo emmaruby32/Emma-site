@@ -45,12 +45,12 @@ The Clips section is `<section id="clips">`.
       <ul class="clip-list">
         <li class="clip">
           <p class="clip-meta">OUTLET · DATE</p>
-          <h3 class="clip-headline"><a href="URL">HEADLINE</a></h3>
+          <h3 class="clip-headline"><a href="URL" target="_blank" rel="noopener">HEADLINE</a></h3>
         </li>
       </ul>
 ```
 
-**If the list already exists**, insert a new `<li class="clip">` block in date order, newest first. Usually that means the top of the list. If this story is older than some clips already listed, put it in its correct date position instead, and tell Emma where it went.
+**If the list already exists**, insert a new `<li class="clip">` block (same markup as above, including `target="_blank" rel="noopener"` so the story opens in a new tab) in date order, newest first. Usually that means the top of the list. If this story is older than some clips already listed, put it in its correct date position instead, and tell Emma where it went.
 
 Details:
 - `URL` is the link Emma gave, as is (remove only tracking parameters like `utm_...`).
