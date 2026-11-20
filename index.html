@@ -5,28 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Emma Ruby</title>
   <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #5f5f5f;
+      --bg: #fdfcfa;
+      --rule: #e3e0da;
+      --accent: #8a1c1c;
+      --placeholder-bg: #fff6d6;
+      --placeholder-border: #d9b84a;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #ece9e4;
+        --muted: #a8a49d;
+        --bg: #161514;
+        --rule: #34312d;
+        --accent: #e07a6e;
+        --placeholder-bg: #3a3218;
+        --placeholder-border: #9c8434;
+      }
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      padding: 48px 16px;
+      padding: 56px 16px 64px;
       font-family: Georgia, "Times New Roman", serif;
-      color: #1a1a1a;
-      background: #fdfcfa;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
     }
-    header {
-      max-width: 720px;
+    main {
+      max-width: 680px;
       margin: 0 auto;
     }
+    header {
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--rule);
+    }
     h1 {
-      margin: 0;
+      margin: 0 0 8px;
       font-size: 2.75rem;
       font-weight: normal;
-      letter-spacing: 0.01em;
+      line-height: 1.15;
+    }
+    .beat {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+    section {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .placeholder {
+      margin: 0;
+      padding: 14px 16px;
+      background: var(--placeholder-bg);
+      border: 1px dashed var(--placeholder-border);
+      border-radius: 4px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+    .contact {
+      padding-top: 32px;
+      margin: 0;
+    }
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Emma Ruby</h1>
-  </header>
+  <main>
+    <header>
+      <h1>Emma Ruby</h1>
+      <p class="beat">Reporter at The Washington Sun and fellow with the Allbritton Journalism Program covering politics</p>
+    </header>
+
+    <section id="about">
+      <h2>About</h2>
+      <!-- ABOUT TEXT GOES HERE: waiting for Emma's About text -->
+      <p class="placeholder">[About text coming soon. Emma will provide this.]</p>
+    </section>
+
+    <section id="clips">
+      <h2>Clips</h2>
+      <!-- CLIPS GO HERE: waiting for Emma's stories -->
+      <p class="placeholder">[Clips coming soon. Emma will add her stories.]</p>
+    </section>
+
+    <p class="contact">You can reach me at <a href="mailto:emmaruby@washsun.com">emmaruby@washsun.com</a>.</p>
+  </main>
 </body>
 </html>
